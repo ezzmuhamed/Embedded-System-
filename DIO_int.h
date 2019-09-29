@@ -1,0 +1,47 @@
+/*
+ * DIO_int.h
+ *
+ *  Created on: 02/08/2019
+ *      Author: Ezzeldin Muhammed
+ */
+
+#ifndef DIO_INT_H_
+#define DIO_INT_H_
+
+/* Port Defines */
+typedef enum {
+	PORTA,
+	PORTB,
+	PORTC,
+	PORTD
+}DIO_PORTS;
+
+
+/* PIN Defines */
+typedef enum {
+	 PIN0  ,
+	 PIN1   ,
+	 PIN2   ,
+	 PIN3   ,
+	 PIN4   ,
+	 PIN5   ,
+	 PIN6   ,
+	 PIN7
+}DIO_PINS;
+
+
+
+/* IO Pins */
+void DIO_SetPinValue(u8 u8PortIdCopy , u8 u8PinIdCopy, u8 u8PinValCopy);
+
+u8 DIO_GetPinValue(u8 u8PortIdCopy, u8 u8PinIdCopy);
+
+void DIO_SetPinDirection (u8 u8PortIdCopy, u8 u8PinIdCopy, u8 u8PinDirCopy);
+
+/* IO Ports */
+void DIO_SetPortDirection (u8 u8PortId, u8 u8PortDir);
+
+void DIO_SetPortValue     (u8 u8PortId, u8 u8PortVal);
+
+
+#endif /* DIO_INT_H_ */
